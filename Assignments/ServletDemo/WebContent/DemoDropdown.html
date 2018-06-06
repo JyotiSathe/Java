@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="form1.submit();">
+<form action="#" name="form1">
+<select id="itemsperpage" name="itemsperpage" onchange="submit();">
+<option value="20">20</option>
+<option value="40" selected>40</option>
+<option value="100">100</option>
+<option value="200">200</option>
+</select>
+</form>
+<%
+String itemsPerPage = request.getParameter("itemsperpage");
+out.println("Items: " + itemsPerPage );
+%>
+</body>
+</html>
